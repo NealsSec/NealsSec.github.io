@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-[Link to another page](./another-page.html).
 # About me
 
 I am Neals, I recently graduated with a Bachelor's in Cyber Security and this
