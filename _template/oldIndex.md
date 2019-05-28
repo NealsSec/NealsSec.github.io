@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+title: Reversing Netis
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 

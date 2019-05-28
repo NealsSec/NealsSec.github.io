@@ -22,6 +22,8 @@ After taking the board out of the enclosure I saw that my work was cut out for m
 
 ![Exposed UART Contacts](pics/2.jpg)
 
+[//]: # (Take a better picture)
+
 # Soldering
 
 To begin examining the UART contacts I simply shined a flashlight underneath the board to show the traces that led to each contact. The middle contact clearly had a rather large trace connecting to it which indicated to me that this was power or VCC. The two contacts off to the side of the middle contact had two small traces connected to them which indicated that they were either TX or RX. Finally the outside contacts have no traces connected to them which indicated that they were both ground.
@@ -41,7 +43,9 @@ There are three main components to success for a soldering job like this.
 2. Flux is a very important component for this type of project as it can essentially reduce the amount of time it takes for you to take off a component and it significantly decreasing the amount of time it takes for you to solder a new component on. It can also help limit the spread of heat to unintended areas but I would not rely on flux to do this for you. For this project I used a tube of MG Chemicals no clean flux paste.
 3. Desoldering Braid makes the process of cleaning the board of preexisting lead free solder much easier as it is several pieces of copper wire that you heat up to entice the existing solder to solder to the braid instead of the contact. Desoldering braid can be found cheaply online and is mostly all the same to my knowledge.
 
-![Exposed UART Contacts](pics/3.jpg)
+![Headers Soldered On](pics/3.jpg)
+
+[//]: # (Take a better picture)
 
 # Logic Analysis
 
@@ -58,6 +62,8 @@ After discovering the settings I would need to use to interface with this UART u
 This configuration yielded a working UART connection in which I could watch the Router go through its boot sequence as if I was consoled into a Cisco router. This UART connection revealed that system was running Linux and immediately dropped me into a Busybox v1.00-pre8 root shell.
 
 ![Exposed UART Contacts](pics/4.jpg)
+
+[//]: # (Take a better picture)
 
 # Firmware Dump
 
