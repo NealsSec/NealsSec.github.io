@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-title: Reversing Netis
+<title>Reversing Netis</title>
 
 # Prologue
 
