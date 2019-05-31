@@ -50,17 +50,7 @@ There are three main components to success for a soldering job like this.
 
 # Logic Analysis
 
-[//]: # (I will want to expand this portion)
-
-By using the logic analyzer I was able to determine that the baud rate was 38400 with no flow control.
-
-[//]: # (I will also need a picture here)
-
-# UART
-
-After discovering the settings I would need to use to interface with this UART using my logic analyzer I connected the device to my Bus Pirate using the standard 10 pin cable included with it while making sure **not** to connect to 3 Volt to 3 Volt and to connect TX on the router to RX on the Bus Pirate and vice versa.
-
-To determine the settings I used a Saleae 8 channel logic analyzer for simplicity as it is the easiest logic analyzer I have ever used and gets results quickly. I attached one channel to the TX pin on the router so that I could determine the baud rate and other settings for connecting to my Bus Pirate as a bridge. I then connected ground to ground and ran the auto UART analyzer with Saleae's software.
+To determine the settings for the UART I used a Saleae 8 channel logic analyzer for simplicity as it is the easiest logic analyzer I have ever used and gets results quickly. I attached one channel to the TX pin on the router so that I could determine the baud rate and other settings for connecting to my Bus Pirate as a bridge. I also connected ground to ground to complete the circuit and ran the auto UART analyzer with Saleae's software.
 
 ![Saleae Connected to Board](pics/5.jpg)
 
@@ -71,6 +61,10 @@ The software yielded a baud rate of 38476 which we can round to 38000 as it is a
 Before moving on I want to make it clear that you don't need a special Logic Analyzer to determine baud rate as there is an easy formula to determine it. Below we see that the smallest peak throughout the transmission is 26 micro seconds. If we take that value and put it under one (so 1/.000026) we get 38461 baud with some change. You can also brute force the settings but that is a tedious process which is why I enjoy the logic analyzer method.
 
 ![UART Peaks for equation](pics/7.jpg)
+
+# UART
+
+After discovering the settings I would need to use to interface with this UART using my logic analyzer I connected the device to my Bus Pirate using the standard 10 pin cable included with it while making sure **not** to connect to 3 Volt to 3 Volt and to connect TX on the router to RX on the Bus Pirate and vice versa.
 
 This configuration yielded a working UART connection with my Bus Pirate which allowed me to watch the Router go through its boot sequence as if it was just a normal computer. This UART connection revealed that system was running Linux and immediately dropped me into a Busybox v1.00-pre8 root shell.
 
