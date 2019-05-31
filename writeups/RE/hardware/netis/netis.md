@@ -70,8 +70,6 @@ This configuration yielded a working UART connection with my Bus Pirate which al
 
 ![UART Output](pics/4.jpg)
 
-[//]: # (Take a better picture)
-
 # Firmware Dump
 
 After gaining access with the UART I decided to see if I could dump firmware from the onboard flash chip. So I desoldered the chip itself and put it into a soic 8 clip and used a program named FlashRom in conjunction with my Bus Pirate to dump the entire memory of the chip. After briefly analyzing the chip it wasn't clear what was contained inside the dump as Binwalk showed no known file systems. I did however find my SSID and my Password in plaintext using strings.
