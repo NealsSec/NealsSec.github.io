@@ -74,4 +74,10 @@ This configuration yielded a working UART connection with my Bus Pirate which al
 
 After gaining access with the UART I decided to see if I could dump firmware from the onboard flash chip. So I desoldered the chip itself and put it into a soic 8 clip and used a program named FlashRom in conjunction with my Bus Pirate to dump the entire memory of the chip. After briefly analyzing the chip it wasn't clear what was contained inside the dump as Binwalk showed no known file systems. I did however find my SSID and my Password in plaintext using strings.
 
-After analyzing the firmware it appeared that the dump and the files within it were either compressed or otherwise obfuscated. So instead of wasting time trying to understand the dump I decided to dump the firmware over UART where I already had access.
+After analyzing the firmware it appeared that the dump and the files within it were either compressed or otherwise obfuscated. So instead of wasting time trying to understand the dump I decided to look at the firmware over UART where I already had access. I also ended up downloading the firmware from the manufacturer as well to be extra thorough.
+
+One of the first things I saw when scanning through the various directories was a passwd file with no accompanying shadow file. This piqued my interest so I grabbed the hash and immediately attacked it using John and the rockyou password list just to see if the password was something simple or if it would take a little more effort to crack. The crack was over in a second at the most and it revealed that they had never changed the default password which was "realtek.
+
+![The Hash](pics/8.png)
+
+![The Cracked Hash](pics/9.png)
