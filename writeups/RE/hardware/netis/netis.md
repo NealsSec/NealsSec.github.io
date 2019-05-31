@@ -60,9 +60,21 @@ By using the logic analyzer I was able to determine that the baud rate was 38400
 
 After discovering the settings I would need to use to interface with this UART using my logic analyzer I connected the device to my Bus Pirate using the standard 10 pin cable included with it while making sure **not** to connect to 3 Volt to 3 Volt and to connect TX on the router to RX on the Bus Pirate and vice versa.
 
-This configuration yielded a working UART connection in which I could watch the Router go through its boot sequence as if I was consoled into a Cisco router. This UART connection revealed that system was running Linux and immediately dropped me into a Busybox v1.00-pre8 root shell.
+To determine the settings I used a Saleae 8 channel logic analyzer for simplicity as it is the easiest logic analyzer I have ever used and gets results quickly. I attached one channel to the TX pin on the router so that I could determine the baud rate and other settings for connecting to my Bus Pirate as a bridge. I then connected ground to ground and ran the auto UART analyzer with Saleae's software.
 
-![Exposed UART Contacts](pics/4.jpg)
+![Saleae Connected to Board](pics/5.jpg)
+
+The software yielded a baud rate of 38476 which we can round to 38000 as it is a standard baud rate on most adapters. It also determined that the settings were 8N1 which is standard for most modern serial interfaces.
+
+![Saleae Settings for UART](pics/6.jpg)
+
+Before moving on I want to make it clear that you don't need a special Logic Analyzer to determine baud rate as there is an easy formula to determine it. Below we see that the smallest peak throughout the transmission is 26 micro seconds. If we take that value and put it under one (so 1/.000026) we get 38461 baud with some change. You can also brute force the settings but that is a tedious process which is why I enjoy the logic analyzer method.
+
+![UART Peaks for equation](pics/7.jpg)
+
+This configuration yielded a working UART connection with my Bus Pirate which allowed me to watch the Router go through its boot sequence as if it was just a normal computer. This UART connection revealed that system was running Linux and immediately dropped me into a Busybox v1.00-pre8 root shell.
+
+![UART Output](pics/4.jpg)
 
 [//]: # (Take a better picture)
 
@@ -70,6 +82,4 @@ This configuration yielded a working UART connection in which I could watch the 
 
 After gaining access with the UART I decided to see if I could dump firmware from the onboard flash chip. So I desoldered the chip itself and put it into a soic 8 clip and used a program named FlashRom in conjunction with my Bus Pirate to dump the entire memory of the chip. After briefly analyzing the chip it wasn't clear what was contained inside the dump as Binwalk showed no known file systems. I did however find my SSID and my Password in plaintext using strings.
 
-This analysis is not over however as I have not yet finished analyzing the dump.
-
-[//]: # (This is where I stopped)
+After analyzing the firmware it appeared that the dump and the files within it were either compressed or otherwise obfuscated. So instead of wasting time trying to understand the dump I decided to dump the firmware over UART where I already had access.
