@@ -54,7 +54,7 @@ To determine the settings for the UART I used a Saleae 8 channel logic analyzer 
 
 ![Saleae Connected to Board](pics/5.jpg)
 
-The software yielded a baud rate of 38476 which we can round to 38000 as it is a standard baud rate on most adapters. It also determined that the settings were 8N1 which is standard for most modern serial interfaces.
+The software yielded a baud rate of 38476 which we can round to 38400 as it is a standard baud rate on most adapters. It also determined that the settings were 8N1 which is standard for most modern serial interfaces.
 
 ![Saleae Settings for UART](pics/6.png)
 
