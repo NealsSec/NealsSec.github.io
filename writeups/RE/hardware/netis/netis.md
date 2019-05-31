@@ -56,11 +56,11 @@ To determine the settings for the UART I used a Saleae 8 channel logic analyzer 
 
 The software yielded a baud rate of 38476 which we can round to 38000 as it is a standard baud rate on most adapters. It also determined that the settings were 8N1 which is standard for most modern serial interfaces.
 
-![Saleae Settings for UART](pics/6.jpg)
+![Saleae Settings for UART](pics/6.png)
 
 Before moving on I want to make it clear that you don't need a special Logic Analyzer to determine baud rate as there is an easy formula to determine it. Below we see that the smallest peak throughout the transmission is 26 micro seconds. If we take that value and put it under one (so 1/.000026) we get 38461 baud with some change. You can also brute force the settings but that is a tedious process which is why I enjoy the logic analyzer method.
 
-![UART Peaks for equation](pics/7.jpg)
+![UART Peaks for equation](pics/7.png)
 
 # UART
 
