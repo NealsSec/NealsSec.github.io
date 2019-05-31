@@ -68,7 +68,7 @@ After discovering the settings I would need to use to interface with this UART u
 
 This configuration yielded a working UART connection with my Bus Pirate which allowed me to watch the Router go through its boot sequence as if it was just a normal computer. This UART connection revealed that system was running Linux and immediately dropped me into a Busybox v1.00-pre8 root shell.
 
-![UART Output](pics/4.jpg)
+![UART Output](pics/4.png)
 
 # Firmware Dump
 
