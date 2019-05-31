@@ -13,8 +13,9 @@ and research both hardware and software samples.
 
 ## Software
 
-This space is under construction as I'm not ready to release a writeup for any of
-my software projects.
+* [Jetlands](./writeups/RE/software/Jetlands/Jetlands.md)
+
+* [H3VR Scoreboard](./writeups/RE/software/H3VR/H3VR.md)
 
 ## Hardware
 
