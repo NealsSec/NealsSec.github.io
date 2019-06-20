@@ -84,4 +84,6 @@ One of the first things I saw when scanning through the various directories was 
 
 Although the firmware analysis was short I still very much enjoyed this project as it allowed me to discover the basics of hardware reverse engineering which will be useful in my future projects. In the end I found a root shell using the UART pins, the default password for root on the firmware, the SSID and password for the network and I believe with more research I would be able to find a method to deobfuscate the firmware dump. My plans to go about deobfuscating the dump start with hunting for the addresses referenced in the bootup text from the UART and end with attempting to sniff the data over SPI with the Saleae logic analyzer while it is being loaded at startup.
 
+Finally, big thanks to Saleae for the logic analyzer! It certainly helped me get the UART settings faster than it would have taken without the logic analyzer. I would recommend their logic analyzers as I believe they are simply the best available for the job in their price point. If you would like to check out their products you can visit <https://www.saleae.com> for their full catalog.
+
 Thank you so much for reading through this and I sincerely hope that you learned something, if you have any feedback don't hesitate to email me at <NealsSec@protonmail.com>!
