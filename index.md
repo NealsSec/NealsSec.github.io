@@ -9,6 +9,8 @@ Github website is essentially dedicated to my writeups and other research.
 I am mostly focused on Reverse Engineering, Pwn and other Vulnerability analysis
 and research both hardware and software samples.
 
+If you wish to contact me my email is <NealsSec@protonmail.com>
+
 # Writeups and Research
 
 ## Software
