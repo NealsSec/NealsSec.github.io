@@ -5,9 +5,7 @@ layout: default
 
 # Prologue
 
-This project is basically my first foray into hardware reverse engineering. My professor's at UTSA were the ones who pushed me to branch out into hardware reverse engineering and I am eternally grateful that they did so as hardware adds an additional interesting dynamic to typical software reverse engineering.
-
-With that being said this writeup is a work in progress and has not actually been fully completed. Below is a draft and it should be treated as such.
+This project is basically my first foray into hardware reverse engineering. My professor's at UTSA were the ones who pushed me to branch out into hardware reverse engineering and I am eternally grateful that they did so as hardware adds an interesting dynamic to typical software reverse engineering.
 
 # The Router
 
@@ -36,7 +34,7 @@ The only way to verify the identify of the middle 3 contacts was to use a voltme
 * The middle contact was confirmed to be VCC or power as it was found to be at 3.3v constantly.
 * The inner rightmost contact was assumed to be RX as this was the only pin remaining in the UART specification.
 
-After determining the configuration of the pins I cleaned up the lead free solder that came from the factory using an adequate amount of flux, desoldering braid and a hot soldering iron and then installed headers so that my logic analyzer could properly make contact with the UART. Admittedly I did botch the first solder job on this board as I did not have any of the materials listed above. This fact just goes to show how important it is to have the right tools for the job.
+After determining the configuration of the pins I cleaned up the lead free solder that came from the factory using an adequate amount of flux, desoldering braid and a hot soldering iron. After cleaning up the board I installed headers so that my logic analyzer could properly make contact with the UART. Admittedly I did botch the first soldering job on this board as I did not have any of the materials listed above. This fact just goes to show how important it is to have the right tools for the job.
 
 There are three main components to success for a soldering job like this.
 
@@ -72,11 +70,11 @@ This configuration yielded a working UART connection with my Bus Pirate which al
 
 # Firmware Dump
 
-After gaining access with the UART I decided to see if I could dump firmware from the onboard flash chip. So I desoldered the chip itself and put it into a soic 8 clip and used a program named FlashRom in conjunction with my Bus Pirate to dump the entire memory of the chip. After briefly analyzing the chip it wasn't clear what was contained inside the dump as Binwalk showed no known file systems. I did however find my SSID and my Password in plaintext using strings.
+After gaining access with the UART I decided to see if I could dump firmware from the onboard flash chip. So I desoldered the chip itself and put it into a soic 8 clip and used a program named FlashRom in conjunction with my Bus Pirate to dump the entire memory of the chip. After briefly analyzing the chip it wasn't clear what was contained inside the dump as Binwalk showed no known file systems. This post will be updated in the case that I figure out how to deobfuscate the firmware dump but by doing a strings analysis on the dump I did find my SSID and my Password in plaintext.
 
 After analyzing the firmware it appeared that the dump and the files within it were either compressed or otherwise obfuscated. So instead of wasting time trying to understand the dump I decided to look at the firmware over UART where I already had access. I also ended up downloading the firmware from the manufacturer as well to be extra thorough.
 
-One of the first things I saw when scanning through the various directories was a passwd file with no accompanying shadow file. This piqued my interest so I grabbed the hash and immediately attacked it using John and the rockyou password list just to see if the password was something simple or if it would take a little more effort to crack. The crack was over in a second at the most and it revealed that they had never changed the default password which was "realtek.
+One of the first things I saw when scanning through the various directories was a passwd file with no accompanying shadow file. This piqued my interest so I grabbed the hash and immediately attacked it using John and the rockyou password list just to see if the password was something simple or if it would take a little more effort to crack. The crack was over in a second at the most and it revealed that they had never changed the default password which was "realtek".
 
 ![The Hash](pics/8.png)
 
