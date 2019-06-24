@@ -53,15 +53,14 @@ take place the resulting base64 encoded strings is placed into the clipboard.
 
 ## getXMLSave
 
-By taking a look at the getXMLSave function we are able to determine that the *important* save data comes from a function named getSave
-which is located in an object named sim. It also appears that whenever getXMLSave is called the game may be saved but more research is
-required to determine if this assumption is entirely true.
+By taking a look at the getXMLSave function we are able to determine that the *important* save data comes from a function named getSave.
+It also appears that whenever getXMLSave is called the game may be saved but I was unable to verify this.
 
 ![getXMLSave](pics/getXMLSave.png)
 
 ## getSave
 
-The getSave function in sim is where the Reverse Engineering begins to get interesting because within this function we begin to see the
+The getSave function is where the Reverse Engineering begins to get interesting because within this function we begin to see the
 start of an XML structure which includes fields for date, version, level, portalAllowed, battleSpeed, endless, and purchases. The purchases
 field appears to be several items long from the use of a for loop to parse it.
 
