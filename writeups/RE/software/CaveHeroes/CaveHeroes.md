@@ -33,8 +33,8 @@ valued tool for every Flash project that I have undertaken. It is also fortunate
 of it was hazy at best before beginning this project.
 
 As soon as I opened up the Flash file I immediately began hunting for any function that dealt with saving or loading as my target for
-this project was undoubtedly the save format. With a little hunting I found the handlers section in the updaters section which was
-full of exporting and importing methods.
+this project was undoubtedly the save format. With a little hunting I found the handlers section which was full of exporting and importing
+methods.
 
 ![Handlers Folder](pics/9.png)
 
