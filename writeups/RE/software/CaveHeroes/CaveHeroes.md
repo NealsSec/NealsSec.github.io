@@ -18,7 +18,7 @@ fact that it allowed me to export saves into a text form which is really rare no
 
 # Reconnaissance
 
-The first step to analyzing any Android application is obtaining the APK. For this writeup I used an [online resource}(https://apkpure.com)
+The first step to analyzing any Android application is obtaining the APK. For this writeup I used an [online resource](https://apkpure.com)
 that keeps copies of the APKs from the Android Market for download. I then simply renamed the APK to a ZIP and extracted the files within.
 I had a suspicion that this game was a Unity game so I immediately started to browse into the assets folder as this is normally where the
 .dll files are located for Unity mobile games. Instead of any reference to Unity I found a .swf file which indicates that this game was
