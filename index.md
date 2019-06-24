@@ -15,6 +15,8 @@ If you wish to contact me my email is <NealsSec@protonmail.com>
 
 ## Software
 
+* [Cave Heroes](./writeups/RE/software/CaveHeroes/CaveHeroes.md)
+
 * [Jetlands](./writeups/RE/software/Jetlands/Jetlands.md)
 
 * [H3VR Scoreboard](./writeups/RE/software/H3VR/H3VR.md)
