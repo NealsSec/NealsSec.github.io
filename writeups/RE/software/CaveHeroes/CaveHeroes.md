@@ -115,7 +115,7 @@ After learning how to deobfuscate the exported strings I then reversed the deobf
 encoding the string which yielded a valid save string. I then tested this with a normal unedited save which yielded me a normal game upon
 import.
 
-![Normal Game](pics/normal.jpg){:height="25%" width="25%"}
+![Normal Game](pics/normal.jpg){:height="40%" width="40%" align="center"}
 
 After nailing down a reliable method for generating valid save strings I began editing the strings to see if any sort of restrictions were
 enforced (Although I saw none in the game logic). My first change was to swap every premium option to turned on to test the waters.
