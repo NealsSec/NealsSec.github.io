@@ -14,7 +14,7 @@ on PC. After wasting many days playing this game instead of *reading* or doing *
 the hood of the game to see if there were any potential vulnerabilities. What really made me take a closer look at this game was the
 fact that it allowed me to export saves into a text form which is really rare now with cloud saving becoming the norm.
 
-![Export Save](pics/settings.jpg)
+![Export Save](pics/settings.jpg){:height="50%" width="50%"}
 
 # Reconnaissance
 
