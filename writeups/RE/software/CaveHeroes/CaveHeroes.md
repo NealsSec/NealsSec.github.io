@@ -107,7 +107,7 @@ publicly revealed in Discord.
 The import menu was relatively easy to open while remaining well hidden. All a user had to do was open and close the settings menu rapidly
 until they are blessed with the fabled import menu.
 
-![Import Menu](pics/import.jpg)
+![Import Menu](pics/import.jpg){:height="75%" width="75%"}
 
 # Generating Save Strings
 
@@ -125,7 +125,7 @@ enforced (Although I saw none in the game logic). My first change was to swap ev
 Importing this save yielded a game with every single permanent upgrade registering as purchased which gave me a handful of perks in the
 game.
 
-![Premium Game](pics/packs.jpg)
+![Premium Game](pics/packs.jpg){:height="50%" width="50%"}
 
 I didn't just stop at activating the packs in this game. There are two premium currencies in this game, crystals and chest charges. These
 were nowhere to be found by name in the decoded save string. To find the values I instead looked for the values that these currencies were
@@ -137,7 +137,7 @@ randomized names. So I promptly added several zeroes to each field to make it ea
 After importing the save file with all premium packs turned on and the currency boosted I was greeted with the boosted amounts of currency
 for each field which was a welcome sight.
 
-![Packs and Currency Changed](pics/packsAndCurrency.jpg)
+![Packs and Currency Changed](pics/packsAndCurrency.jpg){:height="50%" width="50%"}
 
 # Summary
 
