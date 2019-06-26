@@ -107,7 +107,7 @@ publicly revealed in Discord.
 The import menu was relatively easy to open while remaining well hidden. All a user had to do was open and close the settings menu rapidly
 until they are blessed with the fabled import menu.
 
-![Import Menu](pics/import.jpg){:height="75%" width="75%"}
+![Import Menu](pics/import.jpg){:height="50%" width="50%"}
 
 # Generating Save Strings
 
@@ -115,7 +115,7 @@ After learning how to deobfuscate the exported strings I then reversed the deobf
 encoding the string which yielded a valid save string. I then tested this with a normal unedited save which yielded me a normal game upon
 import.
 
-![Normal Game](pics/normal.jpg)
+![Normal Game](pics/normal.jpg){:height="50%" width="50%"}
 
 After nailing down a reliable method for generating valid save strings I began editing the strings to see if any sort of restrictions were
 enforced (Although I saw none in the game logic). My first change was to swap every premium option to turned on to test the waters.
