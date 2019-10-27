@@ -40,9 +40,11 @@ This space is reserved for when I writeup some CTF challenges.
 I mostly work in C and Python making small tools to develop my skills in the
 languages.
 
-* Overflow - This is a private project that I will make public within a month or two
-it is basically a program that outputs x amount of letters and make hunting for
-buffer overflows a little bit easier.
+* [Overflow](https://github.com/NealsSec/OverflowProject) - This is basically a
+program that outputs x amount of letters and makes hunting for buffer overflows
+a little bit easier. Once finished, this project should be able to overflow a buffer
+and overwrite the return pointer with a supplied address to make for easy exploitation.
 
 * [BBMP](https://github.com/Blizire/bbmp) - This is a collaboration project to help
-better learn C while creating some interesting 'art' in the process.
+better learn C while creating some interesting 'art' in the process. This project is
+a library to help create bmp images by leveraging the bmp specification.
