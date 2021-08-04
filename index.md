@@ -3,10 +3,10 @@ layout: default
 ---
 # About me
 
-I am Neals, this Github website is essentially dedicated to my writeups and other research.
+I am Neals, this Github website is dedicated to my writeups and other research.
 
-I am mostly focused on Reverse Engineering, Pwn and other Vulnerability analysis
-and research both hardware and software samples.
+I am mostly focused on Reverse Engineering, Exploitation and other Vulnerability Research
+on both hardware and software samples.
 
 If you wish to contact me my email is <NealsSec@protonmail.com>
 
@@ -22,9 +22,9 @@ If you wish to contact me my email is <NealsSec@protonmail.com>
 
 # Projects
 
-I mostly work in C and Python making small tools to develop my skills in the
-languages.
+I mostly work in C and Python making small tools to develop my programming skills.
 
-* Overflow - This is a private project that I will make public within a month or two
-it is basically a program that outputs x amount of letters and make hunting for
-buffer overflows a little bit easier.
+* [Overflow](https://github.com/NealsSec/OverflowProject) - This is a project that
+outputs x amount of letters in a pattern. This makes hunting for buffer 
+overflows and the offsets for code injection a little bit easier due to the easily 
+recognizable pattern.
